@@ -35,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void find_weather(){
-        String url = "http://api.openweathermap.org/data/2.5/weather?q=carpi,it&appid=41afbec1ba89050882ba1ef131e6aa72&lang=it&units=metric";
+        String url = "http://api.openweathermap.org/data/2.5/weather?q=carpi,it&appid=";
+        String apiKey = "41afbec1ba89050882ba1ef131e6aa72";
+        url = url + apiKey + "&lang=it&units=metric";
         JsonObjectRequest jor = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
